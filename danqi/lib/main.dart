@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'danqi',
+      title: '单骑',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
@@ -38,6 +38,44 @@ class _MyHomePageState extends State<MyHomePage> {
 
   var pageIndex=0;
   var pageList =[Home(),Ride(),zbk(),Mine()];
+
+  Color _Bfontc1=Color.fromRGBO(250,192, 31, 1);
+  Color _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
+  Color _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
+  Color _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
+
+  void _Bfont1(){
+    setState(() {
+      _Bfontc1=Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
+    });
+  }
+  void _Bfont2(){
+    setState(() {
+      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
+      _Bfontc2=Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
+    });
+  }
+  void _Bfont3(){
+    setState(() {
+      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
+      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3=Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
+    });
+  }
+  void _Bfont4(){
+    setState(() {
+      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
+      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4=Color.fromRGBO(250, 192, 31, 1);
+    });
+  }
 
 
   @override
@@ -73,6 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageIndex=0;
                     setState(() {
                     });
+                    _Bfont1();
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '首页',
-                        style: TextStyle(color: Color.fromRGBO(250, 192, 31, 1), fontSize: 13),
+                        style: TextStyle(color: _Bfontc1, fontSize: 13),
                       ),
                     ],
                   ),
@@ -105,6 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageIndex=1;
                     setState(() {
                     });
+                    _Bfont2();
                   },
                   child:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -116,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '骑行',
-                        style: TextStyle(color: Color.fromRGBO(51, 50, 45, 1), fontSize: 13),
+                        style: TextStyle(color: _Bfontc2, fontSize: 13),
                       ),
                     ],
                   ),
@@ -137,6 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageIndex=2;
                     setState(() {
                     });
+                    _Bfont3();
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -148,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '装备库',
-                        style: TextStyle(color: Color.fromRGBO(51, 50, 45, 1), fontSize: 13),
+                        style: TextStyle(color: _Bfontc3, fontSize: 13),
                       ),
                     ],
                   ),
@@ -169,6 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     pageIndex=3;
                     setState(() {
                     });
+                    _Bfont4();
 /*                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => Mine()),
@@ -184,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '我的',
-                        style: TextStyle(color: Color.fromRGBO(51, 50, 45, 1), fontSize: 13),
+                        style: TextStyle(color:_Bfontc4, fontSize: 13),
                       ),
                     ],
                   ),
