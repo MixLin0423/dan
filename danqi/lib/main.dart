@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,58 +32,56 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
+  var pageIndex = 0;
+  var pageList = [Home(), Ride(), zbk(), Mine()];
 
-  var pageIndex=0;
-  var pageList =[Home(),Ride(),zbk(),Mine()];
+  Color _Bfontc1 = Color.fromRGBO(250, 192, 31, 1);
+  Color _Bfontc2 = Color.fromRGBO(51, 50, 45, 1);
+  Color _Bfontc3 = Color.fromRGBO(51, 50, 45, 1);
+  Color _Bfontc4 = Color.fromRGBO(51, 50, 45, 1);
 
-  Color _Bfontc1=Color.fromRGBO(250,192, 31, 1);
-  Color _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
-  Color _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
-  Color _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
-
-  void _Bfont1(){
+  void _Bfont1() {
     setState(() {
-      _Bfontc1=Color.fromRGBO(250, 192, 31, 1);
-      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
-    });
-  }
-  void _Bfont2(){
-    setState(() {
-      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
-      _Bfontc2=Color.fromRGBO(250, 192, 31, 1);
-      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
-    });
-  }
-  void _Bfont3(){
-    setState(() {
-      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
-      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc3=Color.fromRGBO(250, 192, 31, 1);
-      _Bfontc4=Color.fromRGBO(51, 50, 45, 1);
-    });
-  }
-  void _Bfont4(){
-    setState(() {
-      _Bfontc1=Color.fromRGBO(51,50, 45, 1);
-      _Bfontc2=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc3=Color.fromRGBO(51, 50, 45, 1);
-      _Bfontc4=Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc1 = Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc2 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4 = Color.fromRGBO(51, 50, 45, 1);
     });
   }
 
+  void _Bfont2() {
+    setState(() {
+      _Bfontc1 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc2 = Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc3 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4 = Color.fromRGBO(51, 50, 45, 1);
+    });
+  }
+
+  void _Bfont3() {
+    setState(() {
+      _Bfontc1 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc2 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3 = Color.fromRGBO(250, 192, 31, 1);
+      _Bfontc4 = Color.fromRGBO(51, 50, 45, 1);
+    });
+  }
+
+  void _Bfont4() {
+    setState(() {
+      _Bfontc1 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc2 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc3 = Color.fromRGBO(51, 50, 45, 1);
+      _Bfontc4 = Color.fromRGBO(250, 192, 31, 1);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Center(
-        child:
-        pageList[pageIndex],
+        child: pageList[pageIndex],
       ),
       bottomNavigationBar: ClipRect(
         child: BottomAppBar(
@@ -108,9 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     //fixedSize: const Size(390, 100),
                   ),
                   onPressed: () {
-                    pageIndex=0;
-                    setState(() {
-                    });
+                    pageIndex = 0;
+                    setState(() {});
                     _Bfont1();
                   },
                   child: Column(
@@ -141,12 +137,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     //fixedSize: const Size(390, 100),
                   ),
                   onPressed: () {
-                    pageIndex=1;
-                    setState(() {
-                    });
+                    pageIndex = 1;
+                    setState(() {});
                     _Bfont2();
                   },
-                  child:  Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
@@ -174,9 +169,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     //fixedSize: const Size(390, 100),
                   ),
                   onPressed: () {
-                    pageIndex=2;
-                    setState(() {
-                    });
+                    pageIndex = 2;
+                    setState(() {});
                     _Bfont3();
                   },
                   child: Column(
@@ -207,16 +201,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     //fixedSize: const Size(390, 100),
                   ),
                   onPressed: () {
-                    pageIndex=3;
-                    setState(() {
-                    });
+                    pageIndex = 3;
+                    setState(() {});
                     _Bfont4();
 /*                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => Mine()),
                     );*/
                   },
-                  child:  Column(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
@@ -226,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '我的',
-                        style: TextStyle(color:_Bfontc4, fontSize: 13),
+                        style: TextStyle(color: _Bfontc4, fontSize: 13),
                       ),
                     ],
                   ),
