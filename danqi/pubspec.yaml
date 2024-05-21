@@ -63,6 +63,7 @@ flutter:
   assets:
      - assets/images/
      - assets/zbk/配件分类/
+     - assets/qx/
      - assets/zbk/我的关注/
      - assets/zbk/今日热门/
      - assets/images/内容/

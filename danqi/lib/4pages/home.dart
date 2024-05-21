@@ -1449,8 +1449,7 @@ class HomeState extends State<Home> {
                                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                                     child: RichText(
                                       text: const TextSpan(
-                                        text:
-                                            '他挂的1088，车架17，27速，感觉比很多人的都便宜一些，然后我看成色还行。新手也不太懂，预算正好1k，不知道这个是不...',
+                                        text: '他挂的1088，车架17，27速，感觉比很多人的都便宜一些，然后我看成色还行。新手也不太懂，预算正好1k，不知道这个是不...',
                                         style: TextStyle(color: Colors.black, fontSize: 15),
                                         children: <TextSpan>[
                                           TextSpan(

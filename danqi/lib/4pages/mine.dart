@@ -329,7 +329,7 @@ class MineState extends State<Mine> {
                               //color: Colors.yellow,
                               child: const Text(
                                 "本月骑行",
-                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                               ),
                             ),
                           ),

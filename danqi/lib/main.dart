@@ -6,6 +6,7 @@ import '4pages/home.dart';
 import '4pages/ride.dart';
 import 'test.dart';
 import '4pages/zbk.dart';
+import '4pages/ride1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
+
   static GlobalKey homeKey = GlobalKey();
 
   static currentInstance() {
@@ -183,9 +185,15 @@ class MyHomePageState extends State<MyHomePage> {
                         //fixedSize: const Size(390, 100),
                       ),
                       onPressed: () {
-                        pageIndex = 1;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return Ride1();
+                          }),
+                        );
+/*                        pageIndex = 1;
                         setState(() {});
-                        _Bfont2();
+                        _Bfont2();*/
                       },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
